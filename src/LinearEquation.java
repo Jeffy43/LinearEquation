@@ -16,14 +16,27 @@ public class LinearEquation {
     public double slope(){
         return (y2-y1)/(x2-x1);
     }
+    public String slopeFraction(){
+        double a = y2-y1;
+        double b = x2-x1;
+        String c = "";
+        if (a < 0 && b < 0){
+            c = Math.abs(a) + "/" + Math.abs(b);
+        }else if (a < 0 || b < 0){
+            c = "-" + Math.abs(a) + "/" + Math.abs(b);
+        }else{
+            c = Math.abs(a) + "/" + Math.abs(b);
+        }
+        return c;
+    }
     public double yIntercept() {
         return y2 - (slope() * x2);
     }
     public String equation(){
         if (yIntercept() > 0){
-            return "y = " + slope() + "x + " + yIntercept();
+            return "y = " + slopeFraction() + "x + " + yIntercept();
         }else{
-            return "y = " + slope() + "x - " + Math.abs(yIntercept());
+            return "y = " + slopeFraction() + "x - " + Math.abs(yIntercept());
         }
     }
     public String lineInfo(){
