@@ -20,7 +20,7 @@ public class LinearEquationRunner {
         System.out.println();
         System.out.println("Coordinate for x: ");
         double x = scan.nextDouble();
-        System.out.println("The point on the line is" + equation.coordinateForX(x));
+        System.out.println("The point on 1,the line is" + equation.coordinateForX(x));
 
     }
 }
