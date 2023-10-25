@@ -38,6 +38,7 @@ public class LinearEquation {
 
 
     //returns a simplified slope if applicable and if not leaves it in fraction form
+    //NOTE: FOr aesthetic reasons, code won't output the correct slope for coordinates with doubles. To fix, remove (int) in line 57 and 59.
     public String slopeFraction() {
         double a = y2 - y1;
         double b = x2 - x1;
@@ -115,6 +116,8 @@ public class LinearEquation {
         } else if (a > 0) {
             a = (int) (a * 100 + 0.5);
             a = a / 100;
+        } else{
+            a = a * -1;
         }
         return a;
     }
