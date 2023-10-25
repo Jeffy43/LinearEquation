@@ -28,7 +28,5 @@ public class LinearEquationRunner {
         System.out.println("Coordinate for x: ");
         double x = scan.nextDouble();
         System.out.println("The point on 1,the line is" + equation.coordinateForX(x));
-
-
     }
 }
